@@ -11,7 +11,7 @@ function Faq(){
                 <dl>
                     {
                         faqData.map((el, index)=>(
-                            <Accordion data={el} index={index}/>
+                            <Accordion key={index} data={el} index={index}/>
                         ))
                     }
                 </dl>
