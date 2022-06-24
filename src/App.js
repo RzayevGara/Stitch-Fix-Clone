@@ -1,24 +1,32 @@
-import logo from './logo.svg';
-import './App.css';
+import Header from './components/header/Header'
+import Discovering from './components/discovering/Discovering'
+import Works from './components/how-works/Works'
+import Carousel from './components/carousel/Carousel'
+import Brands from './components/brands/Brands'
+import Comments from './components/comments/Comments'
+import Shuffle from './components/shuffle/Shuffle'
+import Offer from './components/offer/Offer'
+import TakeQuiz from './components/take-quiz/TakeQuiz'
+import Faq from './components/faq/Faq'
+import Footer from './components/footer/Footer'
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+   <>
+    <Header/>
+    <main>
+      <Discovering/>
+      <Works/>
+      <Carousel/>
+      <Brands/>
+      <Comments/>
+      <Shuffle/>
+      <Offer/>
+      <TakeQuiz/>
+      <Faq/>
+    </main>
+    <Footer/>
+   </>
   );
 }
 

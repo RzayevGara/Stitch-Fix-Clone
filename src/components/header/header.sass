@@ -1,0 +1,128 @@
+header
+    @include size(100%)
+    background-color: white
+    position: fixed
+    top: 0
+    z-index: 9999
+    @include flex(row, center)
+    &::after
+        content: ''
+        background-color: $border-color
+        @include size(100%, 1px)
+        position: absolute
+        z-index: 10
+        bottom: 0
+        left: 0
+    .container
+        @include size(100%)
+        max-width: 85.375rem
+        @include flex(row, space-between, center)
+        padding: 0 15px
+        .left-section
+            @include flex(row, $align: center)
+            gap: 10px
+            z-index: 10
+            background-color: white
+            .hamburger-menu
+                @include size(24px, 24px)
+                @include flex(column, space-between, center)
+                padding: 4px 2px
+                .line
+                    transition: .4s
+                    @include size(100%, 2px)
+                    background-color: black
+            .hamburger-menu_active
+                @include flex(column, center, center)
+                position: relative
+                .hide
+                    display: none
+                    transition: 1s
+                .line
+                    &:nth-child(1)
+                        transform: rotate(45deg)
+                        position: absolute
+                        transition: .4s
+                    &:nth-child(3)
+                        transform: rotate(-45deg)
+                        position: absolute
+                        transition: .4s
+            .desktop-logo
+                display: none
+            ul
+                @include flex
+                gap: 5px
+                margin-left: 5px
+                li
+                    padding: 13px 10px
+                .active-list
+                    border-bottom: 4px solid $green-active
+        .right-section
+            @include flex(row, $align: center)
+            gap: 20px
+            background-color: white
+            .ul-menu_active
+                top: 3rem
+                transition: .4s
+            ul
+                @include flex(column)
+                @include size(100%)
+                background-color: white
+                position: absolute
+                top: -20rem
+                left: 0
+                z-index: 1
+                padding: 10px 20px
+                transition: .4s
+                li
+                    padding: 12px 0
+                    opacity: .8
+                    &:nth-child(3)
+                        border-top: 1px solid $border-color
+                .btn-sign-red
+                    color: white
+                    background-color: $red-button
+                    border: none
+                    @include size(110px)
+                    padding: 15px 0
+                    margin: 12px 0
+                    font-weight: 600
+            .bag
+                z-index: 10
+                @include flex(row, $align: center)
+                gap: 10px
+                p
+                    display: none
+                    @include responsive_lg
+                        display: flex
+            .btn-sign
+                display: none
+                border: 1px solid black
+                background-color: transparent
+                padding: 7px 17px
+        @include responsive_md
+            .left-section
+                align-items: baseline
+                .hamburger-menu
+                    display: none
+                .desktop-logo
+                    display: flex
+                .mobile-logo
+                    display: none
+            .right-section
+                ul
+                    @include flex(row, $align: center)
+                    position: static
+                    width: auto
+                    gap: 25px
+                    padding: 0 20px
+                    background-color: transparent
+                    li
+                        border: none !important
+                        &:nth-child(1)
+                            display: none
+                            
+                        
+                    .btn-sign-red
+                        display: none
+                .btn-sign
+                    display: block

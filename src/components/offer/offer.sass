@@ -1,0 +1,32 @@
+.offer
+    @include flex(column, $align: center)
+    background-color: $green-light
+    padding: 2.3rem 20px 20px
+    gap: 2rem
+    h2
+        @include font(1.5rem, 400, $align: center)
+    .offer-container
+        width: 100%
+        background-color: white
+        padding: 3rem 2rem
+        @include flex(row, center)
+        ul
+            width: 100%
+            @include flex(column, center, center)
+            gap: 3rem
+            li
+                @include flex(column, $align: center)
+                text-align: center
+                gap: .7rem
+                max-width: 23rem
+                p
+                    text-align: center
+    @include responsive_lmd
+        padding: 2.3rem 5rem 5rem
+    @media (min-width: 1140px)
+        .offer-container
+            width: 100%
+            ul
+                max-width: 95rem
+                gap: 0
+                @include flex(row, space-between, center)

@@ -1,0 +1,31 @@
+.swiper-container
+    margin: auto
+    max-width: 95rem
+    padding-top: 3%
+    .swiper
+        padding-bottom: 1%
+        .swiper-slide
+            width: 335px
+            img
+                max-width: 100%
+            video
+                max-width: 100%
+            .btn-play
+                @include size(30px, 30px)
+            .swiper-slide_container
+                position: relative
+                div
+                    position: absolute
+                    bottom: 30px
+                    text-align: center
+                    width: 100%
+                    p
+                        background-color: white
+                        padding: 5px 25px
+                        margin: 2px 0
+                        display: inline-flex
+                        font-size: 17px
+        .swiper-button-next
+            color: black
+        .swiper-button-prev
+            color: black

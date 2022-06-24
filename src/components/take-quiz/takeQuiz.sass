@@ -1,0 +1,22 @@
+.quiz
+    background-color: $green-dark
+    width: 100%
+    padding: 1.5rem
+    .quiz-container
+        @include flex(column, center, center)
+        background-color: white
+        width: 100%
+        padding: 4rem 2.5rem
+        gap: 1rem
+        h2
+            @include font(32px, 600, $align: center)
+        button
+            border: none
+            background-color: $green-dark
+            padding: 1rem 0
+            @include font(16px)
+            max-width: 20rem
+            width: 100%
+            @include responsive_xs
+                width: 12rem
+

@@ -1,0 +1,37 @@
+.discovering
+    background: $green-linear-bg
+    .discovering-text
+        .discovering-text_container
+            padding: 40px 30px
+            div
+                @include flex(column)
+                gap: 20px
+                p
+                    color: white
+                    @include font(28px, 600, .9px)
+                button
+                    background-color: $green-dark
+                    border: none
+                    @include size(180px, 45px)
+                    @include font($weight: bold, $spacing: .8px)
+                    cursor: pointer
+    .discovering-video
+        position: relative
+        video
+            object-fit: contain
+            width: 100%
+            display: block
+        .btn-play
+            @include size(60px, 60px)
+    @include responsive_lg
+        @include flex(row, space-between, center)
+        .discovering-text
+            flex: 1
+            .discovering-text_container
+                padding: 0
+                @include flex(row, center)
+                div
+                    p
+                        font-size: 34px
+        .discovering-video
+            flex: 1

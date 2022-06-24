@@ -1,0 +1,108 @@
+.shuffle
+    @include flex(column, $align: center)
+    margin: 1rem 0 3rem
+    @include responsive_lmd
+        @include flex(row, center)
+        gap: 8rem
+    .shuffle-text
+        @include flex(column, $align: center)
+        max-width: 19.2rem
+        text-align: center
+        gap: 1.2rem
+        h2
+            font-size: 32px
+        @include responsive_lmd
+            text-align: left
+    .shuffle-area
+        height: 24.7rem
+        width: 19.6rem
+        position: relative
+        margin-top: 3rem
+        &::before
+            content: "" 
+            height: 100% 
+            width: 100% 
+            background: white
+            border-radius: 0.125rem 
+            box-shadow: 0 0 0.25rem rgb(37 40 45 / 5%), 0 0 0.5rem rgb(37 40 45 / 5%) 
+            position: absolute 
+            z-index: 0 
+            left: 14px
+            top: -10px
+        &::after
+            content: "" 
+            height: 100% 
+            width: 100% 
+            background: white
+            border-radius: 0.125rem 
+            box-shadow: 0 0 0.25rem rgb(37 40 45 / 5%), 0 0 0.5rem rgb(37 40 45 / 5%) 
+            position: absolute 
+            z-index: 0 
+            left: 7px
+            top: -5px
+        .shuffle-container
+            align-items: center 
+            background-color: #fff 
+            border-radius: 0.125rem 
+            box-shadow: 0 0 0.25rem rgb(37 40 45 / 5%), 0 0 0.5rem rgb(37 40 45 / 5%) 
+            display: flex 
+            flex-direction: column 
+            height: 100% 
+            width: 100% 
+            justify-content: flex-start 
+            overflow: hidden 
+            position: relative 
+            z-index: 1
+            padding: 1rem
+            gap: 1rem
+            p
+                font-size: 12px
+            h3
+                font-size: 16px 
+            .shuffle-image
+                width: 75%
+                animation: opacity .5s ease-in 1 forwards
+                position: relative 
+                left: 0
+                img
+                    max-width: 100%
+                    border-radius: 30%
+            .dislike-active
+                width: 75%
+                transition: .5s
+                position: relative 
+                left: -20rem
+                transform: rotate(-45deg)
+                img
+                    max-width: 100%
+                    border-radius: 30%
+            .like-active
+                width: 75%
+                transition: .5s
+                position: relative 
+                left: 20rem
+                transform: rotate(45deg)
+                img
+                    max-width: 100%
+                    border-radius: 30%
+            @keyframes opacity
+                0%
+                    opacity: 0
+                100%
+                    opacity: 1
+            .shuffle-buttons
+                @include flex
+                gap: 20px
+                .btn-dislike
+                    img
+                        transform: rotate(180deg)
+                button
+                    background-color: transparent
+                    border: 2px solid $red-button
+                    @include size(3.5rem, 3.5rem)
+                    border-radius: 50%
+                    cursor: pointer
+                    transition: .4s
+                    &:hover
+                        background-color: #fce9ea
+                        transition: .4s

@@ -1,0 +1,31 @@
+.works
+    padding: 50px 20px
+    background-color: $yellow-light
+    @include flex(column, center, center)
+    h2
+        @include font(28px, 600)
+        margin-bottom: 20px
+    .works-container
+        div
+            @include flex(column, $align: center)
+            padding: 16px 32px
+            text-align: center
+            max-width: 375px
+            img
+                max-width: 200px
+            h3
+                @include font(24px, 400)
+                margin: 15px 0
+            p
+                line-height: 24px
+                padding: 0 14px
+    @include responsive_sm
+        h2
+            margin-bottom: 50px
+        .works-container
+                display: grid
+                grid-template-columns: repeat(3,1fr)
+                justify-content: space-between
+                div
+                    img
+                        max-width: 250px

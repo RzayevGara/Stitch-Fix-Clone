@@ -1,0 +1,45 @@
+.faq
+    @include flex(row, center)
+    margin: 5.3rem 0 1rem
+    .faq-container
+        @include flex(column, center, center)
+        max-width: 80rem
+        gap: 1.6rem
+        dl
+            max-width: 38rem
+            @include flex(column)
+            gap: 1.5rem
+            padding: 2rem
+            div
+                dt
+                    button
+                        background-color: transparent
+                        border: none
+                        @include flex(row, $align: baseline)
+                        gap: .7rem
+                        font-size: 16px
+                        cursor: pointer
+                        span
+                            padding: .3rem 0
+                            transition: .4s
+                            background-image: linear-gradient(currentColor,currentColor)
+                            background-position-y: 100%
+                            background-repeat: no-repeat
+                            background-size: 0% 1px
+                            @include font(18px, 600, $spacing: 1.3px, $align: left)
+                            &:hover
+                                background-size: 100% 1px
+                                transition: background-size .4s cubic-bezier(.23,1,.32,1)
+                dd
+                   margin: 1rem 1.8rem
+                   display: none
+                   font-size: 16px
+                .dd-active
+                   display: block
+                   animation: opacity .4s ease-in 1 forwards
+
+                @keyframes opacity
+                    0%
+                        opacity: 0
+                    100%
+                        opacity: 1
